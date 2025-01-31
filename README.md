@@ -83,5 +83,7 @@ play_game(): Alternates turns between Player X and Player O.
 Each version serves a different purpose:
 
 Version 1: Simple Tic-Tac-Toe with random AI (Beginner Level).
+
 Version 2: Advanced AI using Minimax (Intermediate Level).
+
 Version 3: Multiplayer Tic-Tac-Toe (for two human players).
