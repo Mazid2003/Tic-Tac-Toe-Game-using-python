@@ -1,14 +1,18 @@
 import math
+import time
 
 # Initialize the board
 board = [" " for _ in range(9)]
 
-# Function to print the board
+# Function to print the styled board
 def print_board():
+    print("\n")
+    print("  ┌───┬───┬───┐")
     for i in range(0, 9, 3):
-        print(f"{board[i]} | {board[i+1]} | {board[i+2]}")
+        print(f"  │ {board[i]} │ {board[i+1]} │ {board[i+2]} │")
         if i < 6:
-            print("-" * 9)
+            print("  ├───┼───┼───┤")
+    print("  └───┴───┴───┘\n")
 
 # Function to check for a winner
 def check_winner(player):
@@ -58,6 +62,8 @@ def minimax(depth, is_maximizing):
 
 # AI chooses the best move using Minimax
 def computer_move():
+    print("\n🤖 Computer is thinking...")
+    time.sleep(1)  # Simulating AI's thinking time
     best_score = -math.inf
     best_move = None
 
@@ -78,18 +84,19 @@ def computer_move():
 def player_move():
     while True:
         try:
-            move = int(input("Enter your move (1-9): ")) - 1
+            move = int(input("\n🎯 Enter your move (1-9): ")) - 1
             if 0 <= move < 9 and board[move] == " ":
                 board[move] = "X"
                 break
             else:
-                print("Invalid move! Try again.")
+                print("❌ Invalid move! That spot is taken or out of range. Try again.")
         except ValueError:
-            print("Please enter a valid number.")
+            print("⚠️ Please enter a valid number between 1-9.")
 
 # Main game loop
 def play_game():
-    print("Welcome to Tic-Tac-Toe!")
+    print("\n🎮 Welcome to Tic-Tac-Toe! 🎮")
+    print("🔹 You are 'X' | 🤖 AI is 'O'")
     print_board()
 
     while True:
@@ -97,21 +104,20 @@ def play_game():
         player_move()
         print_board()
         if check_winner("X"):
-            print("🎉 You win!")
+            print("\n🎉 Congratulations! You win! 🎉")
             break
         if is_full():
-            print("It's a draw!")
+            print("\n🤝 It's a draw! Well played.")
             break
 
         # AI's turn
-        print("Computer is making a move...")
         computer_move()
         print_board()
         if check_winner("O"):
-            print("💻 Computer wins!")
+            print("\n💻 Computer wins! Better luck next time! 😢")
             break
         if is_full():
-            print("It's a draw!")
+            print("\n🤝 It's a draw! Well played.")
             break
 
 if __name__ == "__main__":
