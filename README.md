@@ -1,4 +1,4 @@
-**1️⃣ Simple Player vs. Computer Tic-Tac-Toe (Random AI)**
+# 1️⃣ Simple Player vs. Computer Tic-Tac-Toe (Random AI)
 
 **📌 Features:**
 
@@ -28,7 +28,7 @@ play_game(): Main game loop handling user and AI turns.
 
 ✅ Possible Enhancement: Improve AI using Minimax (covered in the next version).
 
-**2️⃣ Tic-Tac-Toe with AI (Minimax Algorithm)**
+# 2️⃣ Tic-Tac-Toe with AI (Minimax Algorithm)
 
 **📌 Features:**
 
@@ -60,7 +60,7 @@ The AI never loses unless the opponent also plays perfectly.
 
 ✅ Possible Enhancement: Add Alpha-Beta Pruning to optimize Minimax for faster decision-making.
 
-**3️⃣ Two-Player Tic-Tac-Toe (No AI, Just Multiplayer)**
+# 3️⃣ Two-Player Tic-Tac-Toe (No AI, Just Multiplayer)
 
 **📌 Features:**
 
