@@ -88,6 +88,10 @@ Version 2: Advanced AI using Minimax (Intermediate Level).
 
 Version 3: Multiplayer Tic-Tac-Toe (for two human players).
 
+**💬 Want to Collaborate?**
+
+Feel free to fork the repo, submit PRs, and give your feedback! 🔥💡
+
 **📜 License**
 
 This project is open-source under the MIT License. Feel free to use and
